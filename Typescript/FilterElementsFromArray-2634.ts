@@ -1,5 +1,3 @@
-type Fn = (n: number, i: number) => boolean;
-
 /**
  * Filters an array based on a provided function.
  *
@@ -7,7 +5,7 @@ type Fn = (n: number, i: number) => boolean;
  * @param {Fn} fn - The function to test each element. It takes the element and its index as arguments and returns a boolean indicating whether the element should be included in the new array.
  * @returns {number[]} A new array with the elements that pass the test implemented by the provided function.
  */
-function filter(arr: number[], fn: Fn): number[] {
+function filter(arr: number[], fn: CallableFunction): number[] {
     // Initialize a new array to store the filtered results
     const filteredArr: number[] = [];
     
